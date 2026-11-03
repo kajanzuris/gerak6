@@ -2,6 +2,7 @@
 
 import { loadFont } from "@remotion/google-fonts/Poppins";
 import React from "react";
+import type { Item } from "./types";
 
 // Tema "explainer": latar krem berbintik, header merek, judul 2 tingkat (kecil + besar) yang muncul per kata
 // mengikuti suara, blok UI (jendela chat, dialog, folder, perbandingan, pohon) di tengah, maskot di bawah.
@@ -173,4 +174,72 @@ export const LAYOUT: Record<ThemeName, ThemeLayout> = {
   classic:  { headTop: 190, stageTop: 360, stageTopM: 420, stageBottom: 260, stageBottomM: 840, feet: 1500, mScale: 0.85, mxLeft: 300, mxCenter: 540, mxRight: 780, shiftWhenNoHeader: false, stageAlign: "center",     stageGap: 28 },
   tutorial: { headTop: 150, stageTop: 470, stageTopM: 500, stageBottom: 540, stageBottomM: 700, feet: 1800, mScale: 0.62, mxLeft: 250, mxCenter: 540, mxRight: 830, shiftWhenNoHeader: false, stageAlign: "center",     stageGap: 28 },
   neon:     { headTop: 190, stageTop: 170, stageTopM: 170, stageBottom: 700, stageBottomM: 700, feet: 1800, mScale: 0.62, mxLeft: 250, mxCenter: 540, mxRight: 830, shiftWhenNoHeader: false, stageAlign: "flex-start", stageGap: 18 },
+};
+
+// ================= POSISI DEFAULT "POPS" (objek pelengkap) =================
+// Dipakai bila sebuah pop tidak punya "y" di scenes.src.json. Tujuannya: pops tidak menimpa teks kartu.
+
+// Batas bawah pops per tema (di atas caption tema tersebut).
+export const POP_MAX_Y: Record<ThemeName, number> = {
+  clean: 1780, hud: 1500, classic: 1480, tutorial: 1430, neon: 1270,
+};
+
+// Ukuran dasar pop (harus sama dengan SIZE di overlays.tsx)
+const POP_SIZE = 260;
+
+// Perkiraan tinggi (px) tiap blok stage. Angka ini perkiraan; setel bila pops masih terlalu dekat / jauh.
+export const estBlockH = (b: Item): number => {
+  const n = (a?: unknown[], max = 4) => Math.min(max, (a || []).length);
+  switch (b.type) {
+    case "image": return b.frame === false ? (b.h || 760) + (b.caption ? 50 : 0) : (b.h || 640) + 28 + (b.caption ? 50 : 0);
+    case "callout": return 96 + 77 + (b.sub ? 68 : 0) + (b.cta ? 80 : 0);
+    case "window": return 118 + n(b.rows) * 72 + 16 * Math.max(0, n(b.rows) - 1);
+    case "list": return 124 + n(b.items) * 90 + (b.cta ? 80 : 0);
+    case "stat": return 340;
+    case "chip": return 120;
+    case "tiles": return n(b.cols) <= 2 ? 100 : 218;
+    case "kpi": return b.big ? 260 : 140;
+    case "notifs": return n(b.notifs) * 84 + 12 * Math.max(0, n(b.notifs) - 1);
+    case "meter": return 160;
+    case "bars": return 480;
+    case "terminal": return (b.h || 420) + 110;
+    case "browser": return (b.h || 380) + 120;
+    case "phone": return b.h || 820;
+    case "compare": return 330;
+    case "tree": return 230;
+    case "dialog": return 520;
+    case "files": return (b.title ? 50 : 0) + 280;
+    case "icons": return 330;
+    case "profile": return 230;
+    case "brand": return 380;
+    default: return 300;
+  }
+};
+
+// Y default (puncak) untuk pops pada satu adegan.
+//   - adegan bergambar     : pops di dekat pojok atas gambar (seperti sebelumnya)
+//   - adegan kartu         : pops di BAWAH kartu bila muat di atas caption tema
+//   - bila tidak muat      : pops jadi "stiker" di atas tepi atas kartu, tidak menutupi teks
+export const popDefaultY = (stage: Item[], theme: ThemeName, hasMascot: boolean, shift: number, popCount: number): number => {
+  const L = LAYOUT[theme];
+  const top = (hasMascot ? L.stageTopM : L.stageTop) + shift;
+  const bottom = 1920 - (hasMascot ? L.stageBottomM : L.stageBottom);
+  const gap = L.stageGap;
+  const hs = stage.map(estBlockH);
+  const total = hs.reduce((a, b) => a + b, 0) + gap * Math.max(0, hs.length - 1);
+  const start = L.stageAlign === "center" ? top + (bottom - top - total) / 2 : top;
+
+  const imgI = stage.findIndex((b) => b.type === "image");
+  if (imgI >= 0) {
+    const off = hs.slice(0, imgI).reduce((a, h) => a + h + gap, 0);
+    return Math.round(start + off + 10);
+  }
+
+  const rows = Math.max(1, Math.ceil(popCount / 2));
+  const need = rows * POP_SIZE + (rows - 1) * 20;
+  const maxY = Math.min(POP_MAX_Y[theme], bottom + 60);
+  const cardBottom = start + total;
+  if (cardBottom + 24 + need <= maxY) return Math.round(cardBottom + 24);
+
+  return Math.round(Math.max(20, start - 130));
 };
