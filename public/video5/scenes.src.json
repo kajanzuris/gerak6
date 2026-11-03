@@ -1,0 +1,348 @@
+{
+  "style": "explainer",
+  "scenes": [
+    {
+      "title": "*Mungkin* kamu udah *riset* jualan tiap hari,",
+      "start": 0,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img01.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "jualan",
+          "glyph": "🛒",
+          "anim": "pop",
+          "x": 920,
+          "s": 0.85,
+          "object": "a shopping cart",
+          "img": "pics/pop01.png"
+        }
+      ]
+    },
+    {
+      "title": "*tapi* kok *rasanya* belum pas ya?",
+      "start": 3,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img02.png",
+          "h": 960,
+          "frame": false
+        }
+      ]
+    },
+    {
+      "title": "Bisa jadi karena kamu *terlalu* *banyak* mikir sih.",
+      "start": 5.3,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img03.png",
+          "h": 960,
+          "frame": false
+        }
+      ]
+    },
+    {
+      "title": "*Sini* deh, coba *dengerin.*",
+      "start": 8.5,
+      "small": 0,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img04.png",
+          "h": 960,
+          "frame": false
+        }
+      ]
+    },
+    {
+      "title": "*Anggap* aja *jualan* itu kayak kamu lagi rekomendasiin skincare",
+      "start": 10.5,
+      "small": 1,
+      "stage": [
+        {
+          "type": "callout",
+          "title": "Anggap aja jualan",
+          "sub": "itu kayak kamu lagi"
+        }
+      ],
+      "pops": [
+        {
+          "word": "jualan",
+          "glyph": "🛒",
+          "anim": "pop",
+          "x": 160,
+          "s": 0.85,
+          "object": "a shopping cart",
+          "img": "pics/pop01.png"
+        }
+      ]
+    },
+    {
+      "title": "*favorit* kamu ke aku.",
+      "start": 14.1,
+      "small": 0,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img05.png",
+          "h": 960,
+          "frame": false
+        }
+      ]
+    },
+    {
+      "title": "*Terus,* kamu *fokus* aja jelasin gimana produk itu bisa bantu",
+      "start": 15.9,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img06.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "produk",
+          "glyph": "📦",
+          "anim": "pop",
+          "x": 900,
+          "s": 0.8,
+          "object": "a cardboard package box",
+          "img": "pics/pop02.png"
+        }
+      ]
+    },
+    {
+      "title": "*nyelesain* *masalah* orang lain.",
+      "start": 19.6,
+      "small": 0,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img07.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "masalah",
+          "glyph": "⚠️",
+          "anim": "pop",
+          "x": 170,
+          "s": 0.95,
+          "object": "a warning triangle sign",
+          "img": "pics/pop03.png"
+        }
+      ]
+    },
+    {
+      "title": "Nah, *kuncinya* tuh *langsung* klik tombol posting sekarang juga,",
+      "start": 21.3,
+      "small": 1,
+      "stage": [
+        {
+          "type": "callout",
+          "title": "Nah, kuncinya tuh",
+          "sub": "langsung klik tombol posting"
+        }
+      ],
+      "pops": [
+        {
+          "word": "kuncinya",
+          "glyph": "🔒",
+          "anim": "pop",
+          "x": 900,
+          "s": 0.8,
+          "object": "a closed padlock",
+          "img": "pics/pop04.png"
+        },
+        {
+          "word": "posting",
+          "glyph": "📲",
+          "anim": "pop",
+          "x": 180,
+          "s": 0.75,
+          "object": "a smartphone with a notification bubble",
+          "img": "pics/pop05.png"
+        }
+      ]
+    },
+    {
+      "title": "*tanpa* *perlu* nunggu foto yang estetik banget.",
+      "start": 25.3,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img08.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "foto",
+          "glyph": "📷",
+          "anim": "pop",
+          "x": 180,
+          "s": 0.75,
+          "object": "a camera",
+          "img": "pics/pop06.png"
+        }
+      ]
+    },
+    {
+      "title": "*Ingat,* *pasti* jualan kamu bakal kerasa jauh lebih ringan dan",
+      "start": 27.4,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img09.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "jualan",
+          "glyph": "🛒",
+          "anim": "pop",
+          "x": 920,
+          "s": 0.85,
+          "object": "a shopping cart",
+          "img": "pics/pop01.png"
+        }
+      ]
+    },
+    {
+      "title": "*natural* *banget* deh.",
+      "start": 30.6,
+      "small": 0,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img10.png",
+          "h": 960,
+          "frame": false
+        }
+      ]
+    },
+    {
+      "title": "*Kirim* *video* ini ke teman kamu yang juga lagi takut buat mulai",
+      "start": 32.2,
+      "small": 1,
+      "stage": [
+        {
+          "type": "window",
+          "title": "Rencana",
+          "tone": "#1f9d8a",
+          "rows": [
+            {
+              "k": "check",
+              "state": "done",
+              "text": "Kirim video ini"
+            },
+            {
+              "k": "check",
+              "state": "todo",
+              "text": "ke teman kamu"
+            }
+          ]
+        }
+      ],
+      "pops": [
+        {
+          "word": "video",
+          "glyph": "🎬",
+          "anim": "pop",
+          "x": 140,
+          "s": 0.8,
+          "object": "a film clapperboard",
+          "img": "pics/pop07.png"
+        },
+        {
+          "word": "teman",
+          "glyph": "🤝",
+          "anim": "pop",
+          "x": 910,
+          "s": 0.9,
+          "object": "two hands shaking",
+          "img": "pics/pop08.png"
+        },
+        {
+          "word": "takut",
+          "glyph": "😨",
+          "anim": "pop",
+          "x": 150,
+          "s": 0.9,
+          "object": "a scared worried face with wide eyes",
+          "img": "pics/pop09.png"
+        },
+        {
+          "word": "mulai",
+          "glyph": "🚀",
+          "anim": "slide-right",
+          "x": 930,
+          "s": 0.95,
+          "object": "a rocket flying upward",
+          "img": "pics/pop10.png"
+        }
+      ]
+    },
+    {
+      "title": "*bisnis* *pertamanya* ya.",
+      "start": 35.2,
+      "small": 0,
+      "stage": [
+        {
+          "type": "callout",
+          "title": "bisnis pertamanya ya.",
+          "sub": ""
+        }
+      ]
+    }
+  ],
+  "header": false,
+  "accent": "#ff3f8e",
+  "charColor": "#222222",
+  "showCta": false,
+  "charStyle": "block",
+  "transitions": [
+    "fade",
+    "slide-left",
+    "slide-up",
+    "zoom",
+    "wipe"
+  ],
+  "transitionsMode": "random",
+  "backgrounds": [
+    "cream",
+    "mint",
+    "sky",
+    "sunset",
+    "dark",
+    "navy"
+  ],
+  "bgMode": "auto",
+  "bgEvery": 3,
+  "theme": "neon",
+  "audio": {
+    "music": true,
+    "sfx": true,
+    "blockSfx": true
+  }
+}
