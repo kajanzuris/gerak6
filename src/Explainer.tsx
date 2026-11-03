@@ -3,7 +3,7 @@
 // blocks (tampilan tiap blok), themes (judul/caption/latar per tema), mascots, scenery.
 import { AbsoluteFill, Audio, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import React from "react";
-import { BG_PRESETS, C, CLASSIC_BGS, CLASSIC_PROPS, FONT, HUD_CYAN, HUD_VARS, LAYOUT, NEON_VARS, TD, TRANS, TUT_VARS, bgStyle, classicVars, easeIO, transPair } from "./parts/config";
+import { BG_PRESETS, C, CLASSIC_BGS, CLASSIC_PROPS, FONT, HUD_CYAN, HUD_VARS, LAYOUT, NEON_VARS, TD, TRANS, TUT_VARS, bgStyle, classicVars, easeIO, popDefaultY, transPair } from "./parts/config";
 import type { ThemeName } from "./parts/config";
 import { Bg, Prop } from "./parts/scenery";
 import { Block, HoloRing, OrbMascot, SpriteMascot, Stick } from "./parts/mascots";
@@ -111,7 +111,12 @@ export const Explainer: React.FC<StoryProps> = ({ name, data: d }) => {
           <div style={{ position: "absolute", left: 60, right: 60, top: (hm ? L.stageTopM : L.stageTop) + (L.shiftWhenNoHeader ? dy : 0), bottom: hm ? L.stageBottomM : L.stageBottom, display: "flex", flexDirection: "column", justifyContent: L.stageAlign, gap: L.stageGap }}>
             {(s.stage || []).map((b, bi) => <StageItem key={bi} b={b} i={bi} />)}
           </div>
-          {s.pops && s.pops.length ? <PopLayer pops={s.pops} defaultY={(hm ? L.stageTopM : L.stageTop) + (L.shiftWhenNoHeader ? dy : 0) + 20} /> : null}
+          {s.pops && s.pops.length ? (
+            <PopLayer
+              pops={s.pops}
+              defaultY={popDefaultY(s.stage || [], themeName, hm, L.shiftWhenNoHeader ? dy : 0, s.pops.length)}
+            />
+          ) : null}
         </div>
       </Ctx.Provider>
     );
