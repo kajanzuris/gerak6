@@ -1,0 +1,278 @@
+{
+  "style": "explainer",
+  "scenes": [
+    {
+      "title": "Eh, kamu tau nggak sih?",
+      "start": 0,
+      "small": 0,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img01.png",
+          "h": 960,
+          "frame": false
+        }
+      ]
+    },
+    {
+      "title": "*Kebanyakan* *orang* tuh salah di satu hal ini pas mau jualan,",
+      "start": 1.6,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img02.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "salah",
+          "glyph": "❌",
+          "anim": "pop",
+          "x": 812,
+          "s": 1.1,
+          "object": "a red cross mark",
+          "img": "pics/pop01.png"
+        },
+        {
+          "word": "jualan",
+          "glyph": "🛒",
+          "anim": "pop",
+          "x": 250,
+          "s": 1,
+          "object": "a shopping cart",
+          "img": "pics/pop02.png"
+        }
+      ]
+    },
+    {
+      "title": "*yaitu* *nunggu* berani dulu baru mau mulai.",
+      "start": 5.3,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img03.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "berani",
+          "glyph": "💪",
+          "anim": "pop",
+          "x": 286,
+          "s": 0.9,
+          "object": "a flexed strong arm",
+          "img": "pics/pop03.png"
+        },
+        {
+          "word": "mulai",
+          "glyph": "🚀",
+          "anim": "slide-right",
+          "x": 848,
+          "s": 1.15,
+          "object": "a rocket flying upward",
+          "img": "pics/pop04.png"
+        }
+      ]
+    },
+    {
+      "title": "*Padahal* *kuncinya* itu jualan aja dulu ke temen-temen deket yang",
+      "start": 7.9,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img04.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "kuncinya",
+          "glyph": "🔒",
+          "anim": "pop",
+          "x": 794,
+          "s": 0.95,
+          "object": "a closed padlock",
+          "img": "pics/pop05.png"
+        },
+        {
+          "word": "jualan",
+          "glyph": "🛒",
+          "anim": "pop",
+          "x": 250,
+          "s": 1,
+          "object": "a shopping cart",
+          "img": "pics/pop02.png"
+        }
+      ]
+    },
+    {
+      "title": "*suportif* biar *mental* kamu makin terlatih. Terus,",
+      "start": 11.7,
+      "small": 1,
+      "pose": "thumbs",
+      "mascot": "left",
+      "stage": [
+        {
+          "type": "callout",
+          "title": "suportif biar mental",
+          "sub": "kamu makin terlatih. Terus,"
+        }
+      ],
+      "pops": [
+        {
+          "word": "mental",
+          "glyph": "🧠",
+          "anim": "pop",
+          "x": 232,
+          "s": 1.1,
+          "object": "a brain",
+          "img": "pics/pop06.png"
+        }
+      ]
+    },
+    {
+      "title": "coba deh lebih *fokus* *kasih* solusi daripada cuma mikirin untung doang.",
+      "start": 14.8,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img05.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "solusi",
+          "glyph": "💡",
+          "anim": "pop",
+          "x": 866,
+          "s": 0.9,
+          "object": "a glowing light bulb",
+          "img": "pics/pop07.png"
+        },
+        {
+          "word": "untung",
+          "glyph": "💰",
+          "anim": "drop",
+          "x": 268,
+          "s": 1.15,
+          "object": "a bag of money with gold coins",
+          "img": "pics/pop08.png"
+        }
+      ]
+    },
+    {
+      "title": "Nah, *posting* aja *tanpa* perlu pusing liatin jumlah likes-nya ya.",
+      "start": 19.2,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img06.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "posting",
+          "glyph": "📲",
+          "anim": "pop",
+          "x": 286,
+          "s": 0.9,
+          "object": "a smartphone with a notification bubble",
+          "img": "pics/pop09.png"
+        },
+        {
+          "word": "likesnya",
+          "glyph": "👍",
+          "anim": "pop",
+          "x": 812,
+          "s": 1.1,
+          "object": "a thumbs up hand",
+          "img": "pics/pop10.png"
+        }
+      ]
+    },
+    {
+      "title": "*Nanti* *rasa* takut kamu itu bakal berubah kok jadi rasa bangga.",
+      "start": 23.3,
+      "small": 1,
+      "stage": [
+        {
+          "type": "image",
+          "src": "img/img07.png",
+          "h": 960,
+          "frame": false
+        }
+      ],
+      "pops": [
+        {
+          "word": "takut",
+          "glyph": "😨",
+          "anim": "pop",
+          "x": 812,
+          "s": 1.1,
+          "object": "a scared worried face with wide eyes",
+          "img": "pics/pop11.png"
+        },
+        {
+          "word": "bangga",
+          "glyph": "🏅",
+          "anim": "pop",
+          "x": 214,
+          "s": 0.95,
+          "object": "a gold medal with ribbon",
+          "img": "pics/pop12.png"
+        }
+      ]
+    },
+    {
+      "title": "*Jangan* *lupa* simpan video ini ya!",
+      "start": 27.2,
+      "small": 1,
+      "pose": "cheer",
+      "mascot": "left",
+      "stage": [
+        {
+          "type": "callout",
+          "title": "Jangan lupa simpan video",
+          "sub": "ini ya!"
+        }
+      ]
+    }
+  ],
+  "header": false,
+  "accent": "#22d3ee",
+  "char": "robot",
+  "charColor": "#222222",
+  "showCta": false,
+  "charStyle": "block",
+  "transitions": [
+    "fade",
+    "slide-left",
+    "zoom"
+  ],
+  "transitionsMode": "cycle",
+  "backgrounds": [
+    "cream"
+  ],
+  "bgMode": "single",
+  "bgEvery": 3,
+  "theme": "hud",
+  "audio": {
+    "music": true,
+    "sfx": true,
+    "blockSfx": true
+  }
+}
